@@ -1,0 +1,22 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "test": "jest --config=jest.config.json --watchAll",
+    "e2e": "cypress open"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
+    "@types/jest": "^26.0.23",
+    "cypress": "^7.4.0",
+    "jest": "^27.0.3",
+    "vite": "^2.3.5"
+  },
+  "dependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.4.0"
+  }
+}
