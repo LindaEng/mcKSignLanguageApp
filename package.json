@@ -1,22 +1,25 @@
 {
-  "version": "0.0.0",
+  "name": "mcksignlanguageapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "test": "jest --config=jest.config.json --watchAll",
-    "e2e": "cypress open"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
   },
-  "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
-    "@types/jest": "^26.0.23",
-    "cypress": "^7.4.0",
-    "jest": "^27.0.3",
-    "vite": "^2.3.5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LindaEng/mcKSignLanguageApp.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LindaEng/mcKSignLanguageApp/issues"
+  },
+  "homepage": "https://github.com/LindaEng/mcKSignLanguageApp#readme",
   "dependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "babel-jest": "^27.4.0"
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
   }
 }
