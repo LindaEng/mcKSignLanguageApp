@@ -18,7 +18,7 @@ app.get("/alphabets",async(req, res)=>{
 })
 // get a alphabet
 
-app.get("/alphabets/:id", async(req, res)=>{
+app.get("/alphabet/:id", async(req, res)=>{
     const {id}=req.params
     try {
         const alphabet = await pool.query("SELECT * FROM alphabet WHERE alphabet_id = $1", [id])
@@ -42,6 +42,34 @@ app.post('/alphabets', async (req, res) => {
 		console.error(error.message);
 	}
 });
+
+// update a alphabet
+app.put("/alphabet/:id", async(req, res)=>{
+    try {
+        const {id} = req.params // WHERE
+        const {description}= req.body // SET
+
+        const updateAlphabet = await pool.query("UPDATE alphabet SET description= $1 WHERE alphabet_id= $2",[description,id])
+
+        res.json("Alphabet was Updated!")
+    } catch (error) {
+        console.error(error.message);
+    }
+})
+
+//DELETE a alphabet
+
+app.delete("/alphabet/:id", async(req, res)=>{
+    try {
+        const {id}= req.params
+
+        const deleteAlphabet = await pool.query("DELETE FROM alphabet WHERE alphabet_id = $1",[id])
+
+        res.json('Alphabet was Deleted!!')
+    } catch (error) {
+        console.error(error.message);
+    }
+})
 
 app.listen(3000, () => {
 	console.log('listening on port 3000');
