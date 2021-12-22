@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 const pool = require('./db');
+const fileUpload = require('express-fileupload');
 
 app.use(express.json());
+
+app.use(fileUpload())
 
 //ROUTES//
 
@@ -30,6 +33,20 @@ app.get("/alphabet/:id", async(req, res)=>{
 })
 
 //create a alphabet
+app.post("/upload",async(req, res)=>{
+    try {
+        const {name,data}=req.files.pic
+        const {id}= req.params
+
+        const newPic= await pool.query("INSERT INTO alphabet (img) VALUES ($1) AND ($2) WHERE alphabet_id = ($3)",[name,data,id])
+
+        res.json(newPic.rows)
+    } catch (error) {
+        console.error(error.message);
+    }
+})
+
+
 app.post('/alphabets', async (req, res) => {
 	try {
 		const { description } = req.body;
