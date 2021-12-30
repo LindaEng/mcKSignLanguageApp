@@ -2,7 +2,5 @@ CREATE DATABASE alphabet;
 
 CREATE TABLE alphabet(
     alphabet_id SERIAL PRIMARY KEY,
-    description VARCHAR(255),
-    img TEXT,
-
+    description VARCHAR(255)
 );
