@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/LindaEng/mcKSignLanguageApp#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-fileupload": "^1.2.1",
     "multer": "^1.4.4",

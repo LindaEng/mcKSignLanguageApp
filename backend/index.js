@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
+var cors = require('cors');
 const pool = require('./db');
 const fileUpload = require('express-fileupload');
 
 
 
 app.use(express.json());
-
-app.use(fileUpload());
+app.use(cors())
 
 
 //ROUTES//
