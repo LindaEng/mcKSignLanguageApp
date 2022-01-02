@@ -1,15 +1,16 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
-import Data from './Data'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FlashcardList from './components/Views/FlashcardList';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hi</h1>
-      <Data/>
-    </div>
-  );
+	return (
+		<Router>
+    <Routes>
+<Route path="/FlashcardList" element={<FlashcardList/>}/>
+    </Routes>
+    </Router>
+	);
 }
 
 export default App;

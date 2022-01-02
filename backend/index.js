@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 var cors = require('cors');
 const pool = require('./db');
-const fileUpload = require('express-fileupload');
+
 
 
 
@@ -104,6 +104,6 @@ app.delete('/alphabet/:id', async (req, res) => {
 	}
 });
 
-app.listen(3000, () => {
-	console.log('listening on port 3000');
+app.listen(4000, () => {
+	console.log('listening on port 4000');
 });
