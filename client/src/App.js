@@ -1,33 +1,15 @@
-
-import React, {useState} from 'react';
-import FlashcardList from './components/FlashcardList'
+import React from 'react';
+import { Counter } from './features/counter/Counter';
+import Data from './Data'
 import './App.css';
 
 function App() {
-	const [cards, setCards] = useState(SAMPLE_CARDS);
-
-	return <FlashcardList flashcards={cards} />;
+  return (
+    <div className="App">
+      <h1>Hi</h1>
+      <Data/>
+    </div>
+  );
 }
-
-const SAMPLE_CARDS = [
-	{
-		id: 1,
-		question: 'Capital of France',
-		answer: 'Paris',
-		options: ['London', 'Paris', 'Barcelona'],
-	},
-	{
-		id: 2,
-		question: 'Capital of England',
-		answer: 'London',
-		options: ['London', 'Paris', 'Barcelona'],
-	},
-	{
-		id: 3,
-		question: 'whats my name?',
-		answer: 'Ayden',
-		options: ['Michael', 'Simon', 'Ayden'],
-	},
-];
 
 export default App;

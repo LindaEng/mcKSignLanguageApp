@@ -1,38 +1,39 @@
-body{
-    background-color: slategrey;
+.App {
+  text-align: center;
 }
 
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border-radius: .25rem;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
-    background-color: white;
-    transform-style: preserve-3d;
-    height: 150px;
-    width: 150px;
-    
-    cursor: pointer;
-    transition: 150ms;
-    transform: perspective(1000px) rotateY(var(--rotate-y,0));
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.card:hover{
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-float infinite 3s ease-in-out;
+  }
 }
 
-.card.flip{
-    --rotate-y: 180deg;
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
 }
 
-.card .front, .card .back{
-    position: absolute;
-    padding: 1rem;
-    backface-visibility: hidden;
+.App-link {
+  color: rgb(112, 76, 182);
 }
 
-.card .back {
-    transform: rotateY(180deg);
+@keyframes App-logo-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
