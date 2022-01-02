@@ -38,22 +38,8 @@ app.get('/alphabet/:id', async (req, res) => {
 	}
 });
 
-//Upload a image
-app.post('/upload', async (req, res) => {
-	try {
-		let imgFile;
-		let uploadPath;
 
-		if (!req.files || Object.keys(req.files).length === 0) {
-			return res.status(400).send('No files were uploaded.');
-		}
 
-		imgFile = req.files.pic;
-		uploadPath = __dirname + '/somewhere/on/your/server/' + imgFile.name;
-	} catch (error) {
-		console.error(error.message);
-	}
-});
 
 //create a alphabet
 app.post('/alphabets', async (req, res) => {

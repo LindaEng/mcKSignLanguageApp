@@ -2,6 +2,36 @@
   text-align: center;
 }
 
+.nav {
+  padding: 1rem;
+  background-color: rgb(78, 118, 250);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cc5500;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 1.3rem;
+  font-family: "Zen Kaku Gothic Antique";
+}
+.links img {
+  height: 29px;
+  margin: 0 0.5rem;
+  opacity: 0.3;
+}
+.links:hover {
+  color: black;
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
