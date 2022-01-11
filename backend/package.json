@@ -14,8 +14,11 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"make-model":"npx sequelize-cli model:generate --name alphabet  --attributes alphabet:string,image:string",
-		"migrate":"npx sequelize-cli db:migrate"
+		"make-model": "npx sequelize-cli model:generate --name alphabet  --attributes alphabet:string,image:string",
+		"migrate": "npx sequelize-cli db:migrate",
+		"down": "npx sequelize-cli db:migrate:undo",
+		"make-seed-data": "npx sequelize-cli seed:generate --name demo-alphabet",
+		"seedDB":"npx sequelize-cli db:seed:all"
 	},
 	"author": "",
 	"license": "ISC"
